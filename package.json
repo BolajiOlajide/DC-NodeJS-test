@@ -5,10 +5,20 @@
   "repository": "git@github.com:BolajiOlajide/DC-NodeJS-test.git",
   "author": "Bolaji Olajide",
   "license": "MIT",
+  "scripts": {
+    "migrate": "yarn sequelize-cli:es6 db:migrate",
+    "sequelize-cli:es6": "./node_modules/.bin/babel-node ./node_modules/.bin/sequelize $*",
+    "start": "babel-watch server.js"
+  },
   "dependencies": {
     "body-parser": "^1.18.3",
     "dotenv": "^6.0.0",
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "pg": "^7.4.3",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.37.10",
+    "sequelize-cli": "^4.0.0",
+    "winston": "^3.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
