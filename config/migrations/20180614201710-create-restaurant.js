@@ -1,6 +1,6 @@
 import logger from 'winston';
 
-export default {
+module.exports = {
   up(queryInterface, Sequelize) {
     return queryInterface.createTable('Restaurants', {
       id: {
@@ -21,8 +21,9 @@ export default {
         allowNull: false
       },
       rating: {
-        type: Sequelize.FLOAT,
-        allowNull: false
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        defaultValue: 0
       },
       commercialEmail: {
         type: Sequelize.STRING,

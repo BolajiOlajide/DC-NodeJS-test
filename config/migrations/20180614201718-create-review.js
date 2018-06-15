@@ -17,7 +17,7 @@ export default {
         allowNull: false,
       },
       rating: {
-        type: Sequelize.FLOAT,
+        type: Sequelize.INTEGER,
         allowNull: false
       },
       restaurantId: {

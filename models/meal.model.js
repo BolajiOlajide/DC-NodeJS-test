@@ -12,7 +12,7 @@ export default class Meal extends Model {
       allowNull: false,
     },
     price: {
-      type: Sequelize.FLOAT,
+      type: Sequelize.INTEGER,
       allowNull: false
     }
   };

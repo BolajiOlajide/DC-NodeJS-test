@@ -16,7 +16,7 @@ export default class Restaurant extends Model {
       allowNull: false,
     },
     rating: {
-      type: Sequelize.FLOAT,
+      type: Sequelize.INTEGER,
       allowNull: false,
       validate: {
         min: 1,
@@ -38,6 +38,14 @@ export default class Restaurant extends Model {
     location: {
       type: Sequelize.STRING,
       allowNull: false,
+    },
+    createdAt: {
+      type: Sequelize.DATE,
+      defaultValue: Date.now()
+    },
+    updatedAt: {
+      type: Sequelize.DATE,
+      defaultValue: Date.now()
     }
   };
 
