@@ -17,7 +17,7 @@ export default {
         allowNull: false,
       },
       rating: {
-        type: Sequelize.NUMBER,
+        type: Sequelize.FLOAT,
         allowNull: false
       },
       restaurantId: {
@@ -36,7 +36,7 @@ export default {
         allowNull: false,
         type: Sequelize.DATE
       }
-    }).catch(error => logger.error(error));
+    }).catch(error => logger.error(error.message));
   },
 
   down(queryInterface) {
